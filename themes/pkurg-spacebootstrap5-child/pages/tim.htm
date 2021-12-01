@@ -1,0 +1,49 @@
+url = "/tim"
+layout = "default"
+title = "Tim"
+
+[builderList]
+modelClass = "Rb\Documentrb\Models\DocumentRb"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "documenttitle"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+<?php
+
+?>
+==
+{% partial 'header' %}
+<section class="page-banner-section pt-75 pb-75 img-bg" style="background-image: url('{{ 'assets/img/bg/common-bg.svg' | theme }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="banner-content">
+                    <h2 class="text-white">Tim</h2>
+                    <div class="page-breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" aria-current="page"><a href="{{ url('/') }}">Beranda</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tim</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row pt-60 pb-60">
+        {% for record in records %}
+            <h3>{{ record.categoryid | raw }}</h3>
+        {% endfor %}
+    </div>
+</div>
+{% partial 'footer' %}
+{% framework %}
+{% framework extras %}

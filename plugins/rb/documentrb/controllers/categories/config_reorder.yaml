@@ -1,0 +1,4 @@
+title: Categories
+modelClass: Rb\Documentrb\Models\DocumentCategory
+toolbar:
+    buttons: reorder_toolbar

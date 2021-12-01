@@ -1,0 +1,62 @@
+fields:
+    menuid:
+        label: 'rb.documentrb::lang.docrb.menuid'
+        span: full
+        required: 1
+        type: text
+    categoryid:
+        label: 'rb.documentrb::lang.docrb.categoryid'
+        span: auto
+        required: 1
+        type: text
+    categoryorderno:
+        label: 'Category Order No'
+        span: auto
+        type: number
+    documenttitle:
+        label: 'rb.documentrb::lang.docrb.documenttitle'
+        span: auto
+        required: 1
+        type: text
+    titleorderno:
+        label: 'Title Order No'
+        span: auto
+        type: number
+    slug:
+        label: 'rb.documentrb::lang.docrb.slug'
+        span: full
+        preset:
+            field: documenttitle
+            type: slug
+        type: text
+    dokumenterkait:
+        label: 'Attach File'
+        mode: file
+        fileTypes: 'pdf, xls, xlsx, doc, docx'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    year:
+        label: 'rb.documentrb::lang.docrb.year'
+        span: auto
+        required: 1
+        type: text
+    author:
+        label: 'rb.documentrb::lang.docrb.author'
+        span: auto
+        type: text
+    lastmodified:
+        label: 'Last Modified'
+        span: auto
+        disabled: 1
+        readOnly: 0
+        type: text
+    modifiedby:
+        label: 'Modified By'
+        span: auto
+        readOnly: 0
+        disabled: 1
+        type: text

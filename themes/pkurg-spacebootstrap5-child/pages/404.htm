@@ -1,0 +1,41 @@
+url = "/404"
+layout = "default"
+title = 404
+is_hidden = 0
+==
+{% partial 'header' %}
+<section class="page-banner-section pt-75 pb-75 img-bg" style="background-image: url('{{ 'assets/img/bg/common-bg.svg' | theme }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="banner-content">
+                    <h2 class="text-white">404 Page</h2>
+                    <div class="page-breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">404</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-404-section pt-130 pb-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-404-content text-center">
+                    <h2 class="mb-30">404</h2>
+                    <h4 class="mb-40">Halaman / Document tidak ditemukan</h4>
+                    <a href="{{ url('/') }}" class="theme-btn">Kembali ke Beranda</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% partial 'footer' %}

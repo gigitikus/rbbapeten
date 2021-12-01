@@ -1,0 +1,63 @@
+{% if canRegister %}
+    {{ form_ajax('onRegister') }}
+    <div class="card card-default">
+        <div class="card-header">
+            <h3>Daftar</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="registerName">Nama Lengkap</label>
+                <input
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    id="registerName"
+                    placeholder="Masukan Nama Lengkap" />
+            </div>
+
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    id="registerEmail"
+                    placeholder="Masukan alamat Email" />
+            </div>
+
+            {% if loginAttribute == "username" %}
+                <div class="form-group">
+                    <label for="registerUsername">Nama Pengguna</label>
+                    <input
+                        name="username"
+                        type="text"
+                        class="form-control"
+                        id="registerUsername"
+                        placeholder="Masukan Nama Pengguna" />
+                </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="registerPassword">Kata Sandi</label>
+                <input
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    id="registerPassword"
+                    placeholder="Masukan Kata Sandi" />
+            </div>
+
+            {% flash success %}
+                <small class="text-success">
+                    Anda telah berhasil mendaftar. Akun Anda belum aktif dan harus disetujui oleh administrator.
+                </small>
+            {% endflash %}
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Daftar</button>
+        </div>
+    </div>
+    {{ form_close() }}
+{% else %}
+    <!-- Registration is disabled. -->
+{% endif %}

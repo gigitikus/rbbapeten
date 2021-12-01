@@ -1,0 +1,92 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table rb_documentrb_doc'
+    - builder_table_create_rb_documentrb_doc.php
+1.0.3:
+    - 'Updated table rb_documentrb_doc'
+    - builder_table_update_rb_documentrb_doc.php
+1.0.4:
+    - 'Updated table rb_documentrb_doc'
+    - builder_table_update_rb_documentrb_doc_2.php
+1.0.5:
+    - 'Updated table rb_documentrb_doc'
+    - builder_table_update_rb_documentrb_doc_3.php
+1.0.6:
+    - 'Created table rb_documentrb_menus'
+    - builder_table_create_rb_documentrb_menus.php
+1.0.7:
+    - 'Created table rb_documentrb_categories'
+    - builder_table_create_rb_documentrb_categories.php
+1.0.8:
+    - 'Created table rb_documentrb_menus_categories'
+    - builder_table_create_rb_documentrb_menus_categories.php
+1.0.9:
+    - 'Updated table rb_documentrb_menus'
+    - builder_table_update_rb_documentrb_menus.php
+1.0.10:
+    - 'Updated table rb_documentrb_categories'
+    - builder_table_update_rb_documentrb_categories.php
+1.0.11:
+    - 'Updated table rb_documentrb_menus'
+    - builder_table_update_rb_documentrb_menus_2.php
+1.0.12:
+    - 'Updated table rb_documentrb_categories'
+    - builder_table_update_rb_documentrb_categories_2.php
+1.0.13:
+    - 'Created table rb_documentrb_menucategory'
+    - builder_table_create_rb_documentrb_menucategory.php
+1.0.14:
+    - 'Drop table rb_documentrb_menucategory'
+    - builder_table_delete_rb_documentrb_menucategory.php
+1.0.15:
+    - 'Drop table rb_documentrb_menus_categories'
+    - builder_table_delete_rb_documentrb_menus_categories.php
+1.0.16:
+    - 'Created table rb_documentrb_menucate'
+    - builder_table_create_rb_documentrb_menucate.php
+1.0.17:
+    - 'Drop table rb_documentrb_menucate'
+    - builder_table_delete_rb_documentrb_menucate.php
+1.0.18:
+    - 'Created table rb_documentrb_docmn'
+    - builder_table_create_rb_documentrb_docmn.php
+1.0.19:
+    - 'Updated table rb_documentrb_docmn'
+    - builder_table_update_rb_documentrb_docmn.php
+1.0.20:
+    - 'Updated table rb_documentrb_docmn'
+    - builder_table_update_rb_documentrb_docmn_2.php
+1.0.21:
+    - 'Updated table rb_documentrb_docmn'
+    - builder_table_update_rb_documentrb_docmn_3.php
+1.0.22:
+    - 'Updated table rb_documentrb_doc'
+    - builder_table_update_rb_documentrb_doc_4.php
+1.0.23:
+    - 'Drop table rb_documentrb_docmn'
+    - builder_table_delete_rb_documentrb_docmn.php
+1.0.24:
+    - 'Updated table rb_documentrb_doc'
+    - builder_table_update_rb_documentrb_doc_5.php
+1.0.25:
+    - 'Updated table rb_documentrb_doc'
+    - builder_table_update_rb_documentrb_doc_6.php
+1.0.26:
+    - 'Created table rb_documentrb_'
+    - builder_table_create_rb_documentrb_.php
+1.0.27:
+    - 'Created table rb_documentrb_document_menu'
+    - builder_table_create_rb_documentrb_document_menu.php
+1.0.28:
+    - 'Created table rb_documentrb_document_category'
+    - builder_table_create_rb_documentrb_document_category.php
+1.0.29:
+    - 'Updated table rb_documentrb_'
+    - builder_table_update_rb_documentrb_.php
+1.0.30:
+    - 'Updated table rb_documentrb_'
+    - builder_table_update_rb_documentrb__2.php
+1.0.31:
+    - 'Updated table rb_documentrb_'
+    - builder_table_update_rb_documentrb__3.php

@@ -1,0 +1,10 @@
+name: DocRB
+modelClass: Rb\Documentrb\Models\DocumentRb
+form: $/rb/documentrb/models/documentrb/documentrb_fields.yaml
+defaultRedirect: rb/documentrb/docrb
+create:
+    redirect: 'rb/documentrb/docrb/update/:id'
+    redirectClose: rb/documentrb/docrb
+update:
+    redirect: rb/documentrb/docrb
+    redirectClose: rb/documentrb/docrb

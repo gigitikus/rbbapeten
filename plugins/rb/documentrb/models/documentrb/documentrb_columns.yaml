@@ -1,0 +1,29 @@
+columns:
+    categoryid:
+        label: 'rb.documentrb::lang.docrb.categoryid'
+        type: text
+        searchable: true
+        sortable: true
+    documenttitle:
+        label: 'rb.documentrb::lang.docrb.documenttitle'
+        type: text
+        searchable: true
+        sortable: true
+    year:
+        label: 'rb.documentrb::lang.docrb.year'
+        type: text
+        searchable: true
+        sortable: true
+    author:
+        label: 'rb.documentrb::lang.docrb.author'
+        type: text
+        searchable: true
+        sortable: true
+    menuid:
+        label: 'rb.documentrb::lang.docrb.menuid'
+        type: text
+        searchable: true
+        sortable: true
+    documenturl:
+        label: 'rb.documentrb::lang.docrb.documenturl'
+        type: text

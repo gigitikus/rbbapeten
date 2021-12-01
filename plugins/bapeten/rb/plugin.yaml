@@ -1,0 +1,6 @@
+plugin:
+    name: 'bapeten.rb::lang.plugin.name'
+    description: 'bapeten.rb::lang.plugin.description'
+    author: bapeten
+    icon: oc-icon-file
+    homepage: ''

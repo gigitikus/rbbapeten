@@ -1,0 +1,10 @@
+name: Menus
+form: $/rb/documentrb/models/documentmenu/fields.yaml
+modelClass: Rb\Documentrb\Models\DocumentMenu
+defaultRedirect: rb/documentrb/menus
+create:
+    redirect: 'rb/documentrb/menus/update/:id'
+    redirectClose: rb/documentrb/menus
+update:
+    redirect: rb/documentrb/menus
+    redirectClose: rb/documentrb/menus

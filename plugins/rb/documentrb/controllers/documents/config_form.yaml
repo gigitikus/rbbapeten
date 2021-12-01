@@ -1,0 +1,10 @@
+name: Documents
+form: $/rb/documentrb/models/documents/fields.yaml
+modelClass: Rb\Documentrb\Models\Documents
+defaultRedirect: rb/documentrb/documents
+create:
+    redirect: 'rb/documentrb/documents/update/:id'
+    redirectClose: rb/documentrb/documents
+update:
+    redirect: rb/documentrb/documents
+    redirectClose: rb/documentrb/documents

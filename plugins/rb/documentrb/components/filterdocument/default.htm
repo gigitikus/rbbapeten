@@ -1,0 +1,59 @@
+{% set documentrb = filterdocument.documentrb %}
+{% set categories = filterdocument.categories %}
+{% set tahun = filterdocument.tahun %}
+{% set currentPage = filterdocument.currentPage %}
+
+<div class="feature-box box-style">
+    <form class="form-horizontal" method="get" action="{{ url('/filter-document') }}">
+        <div class="card-body">
+            <div class="form-group row">
+                <input type="text" name="menuid" style="visibility: hidden;" value="{{ currentPage }}">
+                <label for="ddTahun" class="col-sm-4 col-form-label">Tampilkan Data Tahun</label>
+                <div class="col-sm-10">
+                    <select name="tahun" class="form-select">
+                        <option>Pilih tahun</option>
+                        {% for th in tahun %}
+                        <option value="{{ th }}">{{ th }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success col-sm-2">Tampilkan</button>
+            </div>  
+        </div>
+    </form>
+</div>
+{% for category in categories %}
+    <div class="feature-box box-style">
+        <div class="card">
+            <div class="card-header">
+                <h4>{{ category }}</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <th>Judul Dokumen</th>
+                        <th style="width: 150px;">Tahun</th>
+                        <th style="width: 200px;">Last Modified</th>
+                        <th style="width: 80px;">Aksi</th>
+                    </thead>
+                    {% for doc in documentrb if doc.categoryid == category %}
+                    <tbody>
+                        <tr>
+                            <td>{{ doc.documenttitle }}</td>
+                            <td>{{ doc.year }}</td>
+                            <td>{{ doc.lastmodified }}</td>
+                            <td>
+                                <a href="{{ doc.dokumenterkait.path }}" target="_blank" 
+                                class="btn btn-primary btn-sm" role="button">View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% framework %}
+{% framework extras %}
+{% scripts %}

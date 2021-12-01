@@ -1,0 +1,377 @@
+url = "/"
+layout = "default"
+title = "index"
+is_hidden = 0
+
+[cardslider]
+cardonslider = 4
+maxCardItems = 12
+interval = "false"
+showdate = "frue"
+dateformat = "d/M/y"
+postPage = "blog-post"
+postPageSlug = ":slug"
+exceptcategory = 1
+showuncatpost = "false"
+sortorder = "desc"
+addCss = "frue"
+image_width = 250
+image_height = 150
+mode = "crop"
+==
+{% partial 'header' %}
+
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-6">
+            	<div class="hero-content-wrapper">
+            		<h1 class="mb-0 wow fadeInDown" data-wow-delay=".2s">
+                        REFORMASI BIROKRASI
+                    </h1>
+            		<h3 class="mb-20 wow fadeInLeft" data-wow-delay=".4s">
+            			BADAN PENGAWAS TENAGA NUKLIR
+            		</h3>
+                    <p class="mb-0 wow fadeInLeft" data-wow-delay=".2s">
+                        Reformasi birokrasi pada hakikatnya merupakan upaya untuk  
+                    </p>
+                    <p class="mb-0 wow fadeInLeft" data-wow-delay=".2s">
+                        melakukan pembaharuan dan perubahan mendasar terhadap 
+                    </p>
+                    <p class="mb-25 wow fadeInLeft" data-wow-delay=".2s">
+                        sistem penyelenggaraan pemerintahan.
+                    </p>
+            		<a href="javascript:void(0)" class="theme-btn">Lebih Lanjut</a>
+            	</div>
+            </div>
+            <div class="col-xl-5 col-lg-6">
+                <div class="hero-img">
+                    <div class="d-inline-block hero-img-right">
+                        <img src="{{ 'assets/img/hero/hero-3.png' | theme }}" alt="" class="wow fadeInRight" data-wow-delay=".5s">
+                        <img src="{{ 'assets/img/hero/dots.shape.svg' | theme }}" alt="" class="dot-shape">
+                        <div class="video-btn">
+                            <!-- Button HTML (to Trigger Modal) -->
+                            <a href="#myModal" class="btn btn-primary btn-lg" data-toggle="modal">
+                                <i class="lni lni-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================= hero-section end ========================= -->
+<section class="client-logo-section pt-100">
+    <div class="container">
+    </div>
+</section>
+<!-- ========================= feature-section start ========================= -->
+<section class="feature-section pt-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
+                <div class="section-title text-center mb-55">
+                    <span class="wow fadeInDown" data-wow-delay=".2s">Membangun Komitmen</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Untuk BAPETEN yang lebih baik</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-box box-style">
+                    <div class="card">
+                      <img class="card-img-top" src="{{ 'assets/bapeten/nilai-ampuh.png' | theme }}" alt="Card image">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-box box-style">
+                    <div class="card">
+                      <img class="card-img-top" src="{{ 'assets/bapeten/zona-integritas.png' | theme }}" alt="Card image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-box box-style">
+                    <div class="card">
+                      <img class="card-img-top" src="{{ 'assets/bapeten/agen-perubahan.png' | theme }}" alt="Card image">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- ========================= feature-section end ========================= -->
+
+<!--========================= about-section start========================= -->
+<section id="about" class="pt-100">
+    <div class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about-img-wrapper">
+                        <div class="about-img position-relative d-inline-block wow fadeInLeft" data-wow-delay=".3s">
+                            <img src="{{ 'assets/img/about/about-img.png' | theme }}" alt="">
+
+                            <div class="about-experience">
+                                <h3>Kata Kunci</h3>
+                                <p>Individu atau Kelompok terpilih yang memiliki inisiatif yang mudah 
+                                dan cepat tercapai yang mengawali suatu program. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="about-content-wrapper">
+                        <div class="section-title">
+                            <span class="wow fadeInUp" data-wow-delay=".2s">Tentang</span>
+                            <h2 class="mb-40 wow fadeInRight" data-wow-delay=".4s">Reformasi Birokrasi</h2>
+                        </div>
+                        <div class="about-content">
+                            <p class="mb-45 wow fadeInUp" data-wow-delay=".6s">
+                            Reformasi birokrasi pada hakikatnya merupakan upaya untuk melakukan pembaharuan dan 
+                            perubahan mendasar terhadap sistem penyelenggaraan pemerintahan.
+                            </p>
+                            <div class="counter-up wow fadeInUp" data-wow-delay=".5s">
+                                <div class="counter">
+                                    <span id="secondo" class="countup count color-2" cup-end="42" cup-append="k">
+                                    Agen Perubahan
+                                    </span>
+                                    <p>
+                                    Individu atau kelompok terpilih yang menjadi pelopor perubahan dan sekaligus
+                                    dapat menjadi contoh dan panutan dalam berperilaku yang mencerminkan 
+                                    integritas dan kinerja yang tinggi di lingkungan organisasinya.
+                                    </p>
+                                </div>
+                                <div class="counter">
+                                    <span id="secondo" class="countup count color-2" cup-end="42" cup-append="k">
+                                    Quick Wins
+                                    </span>
+                                    <p>
+                                    Yaitu suatu inisiatif yang mudah dan cepat dicapai (maksimal 12 bulan) yang
+                                    mengawali suatu program yang besar dan sulit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--========================= about-section end========================= -->
+
+<!-- ========================= service-section start ========================= -->
+<section id="service" class="service-section pt-130 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-9 mx-auto">
+                <div class="section-title text-center mb-55">
+                    <span class="wow fadeInDown" data-wow-delay=".2s">8 Area Perubahan</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Reformasi Birokrasi</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">
+                    Untuk BAPETEN yang bersih dan akuntabel, kapabel, dan memiliki pelayanan publik yang prima.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-certificate"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Manajemen Perubahan</h4>
+                        <p>Transformasi sistem dan mekanisme kerja BAPETEN serta mindset (pola  pikir)
+                           dan culture set (cara kerja) individu ASN BAPETEN menjadi lebih adaptif,
+                           inovatif, responsive, professional, dan berintegritas sehingga dapat memenuhi
+                           tuntutan perkembangan zaman dan kebutuhan masyarakat yang semakin meningkat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-direction-alt"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Deregulasi Kebijakan</h4>
+                        <p>
+                        Penyederhanaan regulasi dan menghapus regulasi/kebijakan yang
+                        sifatnya menghambat, meningkatkan efektivitas pengelolaan peraturan 
+                        perundang-undangan yang dikeluarkan
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-ux"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Penataan & Penguatan Organisasi</h4>
+                        <p>
+                        Peningkatan efisiensi dan efektivitas organisasi secara proporsional 
+                        sesuai dengan kebutuhan pelaksanaan tugas sehingga tercipta organisasi
+                        yang tepat fungsi dan tepat ukuran. menciptakan organisasi yang semakin 
+                        sederhana dan lincah.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-layers"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Penataan Tata Laksana</h4>
+                        <p>
+                        Peningkatan efektivitas dan efisiensi sistem, proses, dan prosedur kerja,
+                        penerapan Sistem Pemerintahan Berbasis Elektronik(SPBE) yang akan menjadi 
+                        acuan dalam integrasi proses bisnis, data, infrastruktur, aplikasi dan keamanan
+                        SPBE untuk menghasilkan keterpaduan  secara  nasional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-consulting"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Penataan Sistem Manajemen SDM Aparatur</h4>
+                        <p>
+                        Peningkatan profesionalisme SDM aparatur yang didukung oleh 
+                        sistem rekrutmen dan promosi aparatur berbasis kompetensi, 
+                        transparan, serta memperoleh gaji dan bentuk jaminan kesejahteraan 
+                        yang sepadan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-handshake"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Penguatan Akuntabilitas</h4>
+                        <p>
+                        Menciptakan BAPETEN yang akuntabel dan berkinerja tinggi
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-magnifier"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Penguatan Pengawasan</h4>
+                        <p>
+                        Peningkatan penyelenggaraan pemerintahan yang bersih dan bebas KKN di BAPETEN.   
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-box box-style">
+                    <div class="service-icon box-icon-style">
+                        <i class="lni lni-headphone-alt"></i>
+                    </div>
+                    <div class="box-content-style service-content">
+                        <h4>Peningkatan Kualitas Pelayanan Publik</h4>
+                        <p>
+                        Peningkatan kualitas pelayanan publik BAPETEN sesuai kebutuhan dan harapan masyarakat.  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================= service-section end ========================= -->
+
+<section id="contact" class="contact-section cta-bg img-bg pt-110 pb-100" style="background-image: url('{{ 'assets/img/bg/cta-bg.jpg' | theme }}');">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="section-title mb-60">
+                    <span class="text-white wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">Visi</span>
+                    <p class="text-white wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;"> 
+                    Menjadi Badan Pengawas Tenaga Nuklir yang andal, profesional, inovatif, dan berintegritas dalam pelayanan kepada Presiden dan Wakil Presiden untuk mewujudkan Visi dan Misi Presiden dan Wakil Presiden: "Indonesia Maju yang Berdaulat, Mandiri, dan berkepribadian berlandaskan Gotong Royong"
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+            <div class="section-title mb-60">
+                <span class="text-white wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">Misi</span>
+                    <p class="text-white wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                    Menjamin keselamatan, keamanan, dan garda-aman dalam pemanfaatan tenaga nuklir sesuai standar internasional dalam rangka meningkatkan daya saing 
+dan Meningkatkan kapasitas organisasi
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= pricing-section start ========================= -->
+<section id="pricing" class="pricing-section pt-140 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-7 col-md-10 mx-auto">
+                <div class="section-title text-center mb-60">
+                    <span class="wow fadeInDown" data-wow-delay=".2s">Update</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Kegiatan, Pelaporan, Berita</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">
+                        Pencapaian target adalah prestasi buat kami, dengan terus belajar dan berkembang
+                        maka pencapaian akan mudah diraih.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% component 'cardslider' %}
+        </div>
+    </div>
+</section>
+<!-- ========================= pricing-section end ========================= -->
+
+
+<!-- ========================= subscribe-section start ========================= -->
+<section class="subscribe-section pt-70 pb-70 img-bg" style="background-image: url('{{ 'assets/img/bg/common-bg.svg' | theme }}')">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="section-title mb-30">
+                    <span class="text-white wow fadeInDown" data-wow-delay=".2s"></span>
+                    <h2 class="text-white mb-40 wow fadeInUp" data-wow-delay=".4s">Untuk BAPETEN yang lebih baik</h2>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+            <!--
+                <form action="#" class="subscribe-form wow fadeInRight" data-wow-delay=".4s">
+                    <input type="text" name="subs-email" id="subs-email" placeholder="Your Email">
+                    <button type="submit"><i class="lni lni-telegram-original"></i></button>
+                </form>
+            -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% partial 'footer' %}

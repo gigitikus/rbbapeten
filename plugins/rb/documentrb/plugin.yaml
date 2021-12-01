@@ -1,0 +1,36 @@
+plugin:
+    name: 'rb.documentrb::lang.plugin.name'
+    description: 'rb.documentrb::lang.plugin.description'
+    author: RB
+    icon: oc-icon-book
+    homepage: ''
+permissions:
+    documentrb.docrb.managa_doc:
+        tab: 'rb.documentrb::lang.plugin.name'
+        label: 'rb.documentrb::lang.docrb.manage_doc'
+navigation:
+    documentrb:
+        label: 'Document RB'
+        url: rb/documentrb/docrb
+        icon: icon-book
+        permissions:
+            - documentrb.docrb.managa_doc
+        sideMenu:
+            docrb:
+                label: 'Doc RB'
+                url: rb/documentrb/docrb
+                icon: icon-bookmark
+                permissions:
+                    - documentrb.docrb.managa_doc
+            side-menu-item:
+                label: Menus
+                url: rb/documentrb/menus
+                icon: icon-tag
+            side-menu-item2:
+                label: Categories
+                url: rb/documentrb/categories
+                icon: icon-tags
+            documents:
+                label: Documents
+                url: rb/documentrb/documents
+                icon: icon-file

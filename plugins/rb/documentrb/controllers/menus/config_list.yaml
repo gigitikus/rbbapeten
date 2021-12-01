@@ -1,0 +1,12 @@
+title: Menus
+modelClass: Rb\Documentrb\Models\DocumentMenu
+list: $/rb/documentrb/models/documentmenu/columns.yaml
+recordUrl: 'rb/documentrb/menus/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

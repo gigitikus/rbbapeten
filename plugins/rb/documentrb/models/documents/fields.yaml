@@ -1,0 +1,57 @@
+fields:
+    menu:
+        label: Menu
+        nameFrom: menu_title
+        descriptionFrom: description
+        emptyOption: 'Pilih Menu'
+        span: left
+        type: relation
+    category:
+        label: Category
+        nameFrom: category_title
+        descriptionFrom: category_title
+        emptyOption: 'Pilih Kategori'
+        span: auto
+        type: relation
+    author:
+        label: Penulis
+        span: left
+        type: text
+    year:
+        label: Tahun
+        span: right
+        type: text
+    slug:
+        label: Slug
+        span: full
+        preset:
+            field: author
+            type: slug
+        type: text
+    lampiran:
+        label: Lampiran
+        prompt: 'Tambah Lampiran'
+        style: default
+        span: full
+        type: repeater
+        form:
+            fields:
+                judul_lampiran:
+                    label: 'Judul Lampiran'
+                    span: left
+                    type: text
+                lampiran:
+                    label: 'Upload Lampiran'
+                    span: right
+                    mode: file
+                    type: mediafinder
+    lastmodified:
+        label: 'Terakhir Modifikasi'
+        span: left
+        readOnly: 1
+        type: text
+    modifiedby:
+        label: 'Dimodifikasi Oleh'
+        span: right
+        readOnly: 1
+        type: text

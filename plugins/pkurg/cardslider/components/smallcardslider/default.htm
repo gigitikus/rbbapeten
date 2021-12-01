@@ -1,0 +1,111 @@
+
+{% set CardSlider = __SELF__ %}
+{% set posts = __SELF__.getPosts() %}
+{% set i = 0 %}
+{% set cardOnSlider = CardSlider.property('cardonslider') %}
+{% set k = cardOnSlider %}
+{% set slidercount =  CardSlider.getSliderCount()  %}
+{% set maxCardItems = CardSlider.getTrueMaxItem() %}
+
+<div id="multi-item-{{ CardSlider.property('categoryslug') }}-{{ CardSlider.getCompName() }}" class="carousel slide carousel-multi-item news-multi-carousel" data-interval="{{ CardSlider.property('interval') }}" data-ride="carousel">
+	<!--Indicators-->
+	<ol class="carousel-indicators news-calousel ">
+		<li data-target="#multi-item-{{ CardSlider.property('categoryslug') }}-{{ CardSlider.getCompName() }}" data-slide-to="0" class="cardslider active"></li>
+		{% if (slidercount>1) %}
+		{% for i in 1..slidercount-1 %}
+		<li data-target="#multi-item-{{ CardSlider.property('categoryslug') }}-{{ CardSlider.getCompName() }}" data-slide-to="{{ i }}" class="cardslider "></li>
+		{% endfor %}
+		{% endif %}
+
+	</ol>
+	<!--/.Indicators-->
+	<!--Slides-->
+	<div class="carousel-inner" role="listbox">
+		{% for post in posts %}
+		<!--Slide-->
+		{% if i == 0 %}
+		<div class="carousel-item item active">
+			<div class="row row-equal slider-rows">
+				{% endif %}
+				{% if (cardOnSlider==1) %}
+				<div class="col-sm-12 col-lg-12 news-col">
+					{% endif%}
+					{% if (cardOnSlider==2) %}
+					<div class="col-sm-12 col-lg-6 news-col">
+						{% endif%}
+						{% if (cardOnSlider==3) %}
+						<div class="col-sm-12 col-lg-4 news-col">
+							{% endif%}
+							{% if (cardOnSlider==4) %}
+							<div class="col-sm-12 col-lg-3 news-col">
+								{% endif%}
+								{% if (cardOnSlider==6) %}
+								<div class="col-sm-12 col-lg-2 news-col">
+									{% endif%}
+
+									<a class="card-link text-dark" href="{{ CardSlider.getURLPost(post.slug) }}">
+										<div class=" small-card ">
+
+											<div class="card-body wh-backgrnd">
+
+												<div class="row">
+													<div class="col-lg-4 thanks-photo">
+
+														<div class="slider-logo text-center"><img class="img-slider-logo" alt="{{ post.title }}"
+															{% if (post.featured_images[0].path) %}
+															src="{{ post.featured_images[0].thumb(CardSlider.property('image_width'), CardSlider.property('image_height'),{'mode': CardSlider.property('mode')})  }}"
+															{% else %}
+															src="/plugins/pkurg/cardslider/assets/img/noicon.png"
+															{% endif %}
+
+
+
+															class="rounded-circle">
+
+														</div>
+
+													</div>
+													<div class=" col-lg-8 small-slider-text my-auto text-center ">
+														<p class="card-text ">{{ post.title }}</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</a>
+
+								</div>
+								{% set i = i+1 %}
+								{% if i == k %}
+								{% set k = k+cardOnSlider %}
+
+								{% if i == maxCardItems %}
+							</div>
+						</div>
+						{% set maxCardItems	 = maxCardItems	+1 %}
+						{% else %}
+					</div>
+				</div>
+				<div class="carousel-item item ">
+					<div class="row row-equal">
+						{% endif %}
+						{% endif %}
+
+						{% if i == maxCardItems %}
+					</div>
+				</div>
+				{% endif %}
+
+				{% endfor %}
+			</div>
+			<!--/.Slides-->
+			<!--Controls-->
+			<a class="left carousel-control carousel-control-prev card-carousel" href="#multi-item-{{ CardSlider.property('categoryslug') }}-{{ CardSlider.getCompName() }}" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left   grey carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control carousel-control-next card-carousel" href="#multi-item-{{ CardSlider.property('categoryslug') }}-{{ CardSlider.getCompName() }}" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right grey  carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+			<!--/.Controls-->
+		</div>

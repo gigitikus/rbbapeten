@@ -1,0 +1,48 @@
+ol.carousel-indicators.news-calousel {
+    margin-bottom: -30px;
+}
+
+li.cardslider {
+    background-color: #bdb3bd;
+}
+
+li.cardslider.active {
+    background-color: #000000;
+}
+
+a.carousel-control-prev.card-carousel {
+    width: 50px;
+    margin-left: -50px;
+}
+
+a.carousel-control-next.card-carousel {
+    width: 50px;
+    margin-right: -50px;
+}
+
+.carousel-control-next {
+    filter: invert(100%);
+}
+
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+div.news-col {
+    /*height: 340px;*/
+    padding-bottom: 30px;
+}
+
+.card-text {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div.card.news-card {
+    height: calc(100% + 10px);
+}
+
+img.card-image {
+    width: 100%;
+}
+

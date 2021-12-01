@@ -1,0 +1,4 @@
+title: Menus
+modelClass: Rb\Documentrb\Models\DocumentMenu
+toolbar:
+    buttons: reorder_toolbar

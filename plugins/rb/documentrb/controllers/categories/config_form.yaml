@@ -1,0 +1,10 @@
+name: Categories
+form: $/rb/documentrb/models/documentcategory/fields.yaml
+modelClass: Rb\Documentrb\Models\DocumentCategory
+defaultRedirect: rb/documentrb/categories
+create:
+    redirect: 'rb/documentrb/categories/update/:id'
+    redirectClose: rb/documentrb/categories
+update:
+    redirect: rb/documentrb/categories
+    redirectClose: rb/documentrb/categories

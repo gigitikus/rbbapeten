@@ -1,0 +1,10 @@
+columns:
+    category_title:
+        label: 'category title'
+        type: text
+        searchable: true
+        sortable: true
+    orderno:
+        label: 'order no'
+        type: number
+        sortable: true

@@ -1,0 +1,16 @@
+fields:
+    category_title:
+        label: 'Category Title'
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: left
+        preset:
+            field: category_title
+            type: slug
+        type: text
+    orderno:
+        label: 'Order No'
+        span: left
+        type: number

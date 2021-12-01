@@ -1,0 +1,32 @@
+{% set post = __SELF__.post %}
+
+<h3>{{ post.title }}</h3>
+
+<p class="info">
+    Kategori :
+    {% if post.categories.count %}
+        {% for category in post.categories %}
+            <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+</p>
+<p class="info">
+    Tanggal Publikasi : {{ post.published_at|date('d/M/Y') }}
+</p>
+
+<div class="content pt-20">{{ post.content_html|raw }}</div>
+
+{% if post.featured_images.count %}
+    <div class="featured-images text-center pt-20 pb-20">
+        {% for image in post.featured_images %}
+            <p>
+                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+            </p>
+        {% endfor %}
+    </div>
+{% endif %}
+

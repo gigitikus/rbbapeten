@@ -1,0 +1,22 @@
+fields:
+    menu_title:
+        label: 'Menu Title'
+        span: left
+        type: text
+    slug:
+        label: Slug
+        span: right
+        preset:
+            field: menu_title
+            type: slug
+        type: text
+    orderno:
+        label: 'Order No'
+        span: auto
+        type: number
+    categories:
+        label: Categories
+        span: right
+        nameFrom: category_title
+        descriptionFrom: category_title
+        type: relation

@@ -1,0 +1,12 @@
+title: Categories
+modelClass: Rb\Documentrb\Models\DocumentCategory
+list: $/rb/documentrb/models/documentcategory/columns.yaml
+recordUrl: 'rb/documentrb/categories/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

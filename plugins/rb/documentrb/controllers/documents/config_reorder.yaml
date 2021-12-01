@@ -1,0 +1,4 @@
+title: Documents
+modelClass: Rb\Documentrb\Models\Documents
+toolbar:
+    buttons: reorder_toolbar

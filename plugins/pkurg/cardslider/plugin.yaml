@@ -1,0 +1,6 @@
+plugin:
+    name: 'pkurg.cardslider::lang.plugin.name'
+    description: 'pkurg.cardslider::lang.plugin.description'
+    author: 'Vladimir Pushkov'
+    icon: oc-icon-bars
+    homepage: ''

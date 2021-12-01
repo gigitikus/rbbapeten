@@ -1,0 +1,125 @@
+[session]
+security = "all"
+==
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Reformasi Birokrasi BAPETEN</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="/themes/pkurg-spacebootstrap5/assets/img/favicon.png"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="/themes/pkurg-spacebootstrap5-child/assets/bapeten/RBfavicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->	
+    <link rel="stylesheet" href="{{ 'assets/css/bootstrap-5.0.0-alpha.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/LineIcons.2.0.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/animate.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/main.css'|theme }}">
+    <style type="text/css">
+        /* ============ desktop view ============ */
+        @media all and (min-width: 992px) {
+        	.navbar .nav-item .dropdown-menu{ display: none; }
+        	.navbar .nav-item:hover .nav-link{   }
+        	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+        	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+        }	
+        /* ============ desktop view .end// ============ */
+        /* top level*/
+        .navbar-nav > li > a {
+          padding: 10px 0 0 0;
+        }
+        /* dropdown item */
+        .navbar-nav a.dropdown-item {
+          padding: 10px 10px;
+        }
+
+        .bs-example{
+    	margin: 20px;
+        }
+        .modal-dialog iframe{
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    {% styles %} 
+</head>
+<body>            
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% page %}
+
+    <div class="bs-example">                            
+        <!-- Modal HTML -->
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Vidio RB BAPETEN</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="cartoonVideo" class="embed-responsive-item" 
+                        src="https://www.youtube.com/embed/gK-Ftt0FOc0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>     
+
+    <a href="#" class="scroll-top">
+        <i class="lni lni-arrow-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <script src="{{ 'assets/js/bootstrap.bundle-5.0.0.alpha-min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+    <script src="{{ 'assets/js/imagesloaded.min.js'|theme }}"></script>
+    <script defer src="{{ ['@jquery','@framework','@framework.extras','assets/js/main.js']|theme }}"></script>
+    
+    <script>
+        $(document).ready(function(){
+            /* Get iframe src attribute value i.e. YouTube video url
+            and store it in a variable */
+            var url = $("#cartoonVideo").attr('src');
+            
+            /* Assign empty url value to the iframe src attribute when
+            modal hide, which stop the video playing */
+            $("#myModal").on('hide.bs.modal', function(){
+                $("#cartoonVideo").attr('src', '');
+            });
+            
+            /* Assign the initially stored url back to the iframe src
+            attribute when modal is displayed again */
+            $("#myModal").on('show.bs.modal', function(){
+                $("#cartoonVideo").attr('src', url);
+            });
+        });
+    </script>
+    
+    {% framework %}
+    {% framework extras %}
+    {% scripts %}
+</body>
+</html>

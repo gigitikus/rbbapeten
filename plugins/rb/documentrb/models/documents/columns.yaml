@@ -1,0 +1,19 @@
+columns:
+    author:
+        label: Penulis
+        type: text
+        searchable: true
+        sortable: true
+    year:
+        label: Tahun
+        type: number
+        sortable: true
+    lastmodified:
+        label: 'Last Modified'
+        type: datetime
+        sortable: true
+    modifiedby:
+        label: 'Modified By'
+        type: text
+        searchable: true
+        sortable: true

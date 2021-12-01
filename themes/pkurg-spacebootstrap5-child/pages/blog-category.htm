@@ -1,0 +1,50 @@
+title = "Blog Category"
+layout = "default"
+url = "/blog/category/:slug"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ":slug"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog-category"
+postPage = "blog-post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog-category"
+==
+{% partial 'header' %}
+<section class="page-banner-section pt-75 pb-75 img-bg" style="background-image: url('{{ 'assets/img/bg/common-bg.svg' | theme }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="banner-content">
+                    <h2 class="text-white">Pelaksanaan</h2>
+                    <div class="page-breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)">Beranda</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Pelaksanaan</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row pt-60 pb-60">
+        <div class="col-sm-8">
+            {% component 'blogPosts' %}
+        </div>
+        <div class="col-sm-4">
+            {% component 'blogCategories' %}
+        </div>
+    </div>
+</div>
+{% partial 'footer' %}
+{% framework extras %}

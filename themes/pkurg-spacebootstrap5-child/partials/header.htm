@@ -1,0 +1,92 @@
+<header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            <img src="{{ 'assets/bapeten/rbbapeten-logo.png' | theme }}" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                        <ul id="nav" class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="page-scroll" href="{{ url('/') }}">Beranda</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#"  
+                              data-bs-toggle="dropdown" 
+                              >
+                                Perencanaan
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Roadmap 2020-2024</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/filter-document?menuid=Tim&tahun=2021') }}">Tim</a></li>
+                                <li><a class="dropdown-item" href="#">Rencana Aksi</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/filter-document?menuid=Quick Wins&tahun=2021') }}">Quick Wins</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="page-scroll" href="{{ url('/pelaksanaan/1') }}">Pelaksanaan</a>
+                            </li>                                                   
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="{{ url('/pemantauanevaluasi') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pemantauan & Evaluasi 
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Triwulan I</a></li>
+                                <li><a class="dropdown-item" href="#">Triwulan II</a></li>
+                                <li><a class="dropdown-item" href="#">Triwulan III</a></li>
+                                <li><a class="dropdown-item" href="#">Triwulan IV</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="{{ url('/contact') }}">Pelaporan</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PMPRB
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{ url('/filter-document?menuid=Tim PMPRB&tahun=2021') }}">Tim PMPRB</a></li>
+                                <li><a class="dropdown-item" href="#">Rencana Kerja</a></li>
+                                <li><a class="dropdown-item" href="#">Lembar Kerja Evaluasi</a></li>
+                                <li><a class="dropdown-item" href="#">Evidence</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Penghargaan
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Eksternal</a></li>
+                                <li><a class="dropdown-item" href="#">Pegawai Terbaik</a></li>
+                              </ul>
+                            </li>
+                            {% if user %}
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#" data-request="onLogOut">Logout</a>
+                            </li>
+                            {% else %}
+                            <li class="nav-item">
+                                <a class="page-scroll" href="{{ url('/account') }}">Masuk / Daftar</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                        <!-- <form action="#" class="search-form">
+                            <input type="text" placeholder="Search">
+                            <button type="submit"><i class="lni lni-search-alt"></i></button>
+                        </form> -->
+                    </div> <!-- navbar collapse -->
+                </nav> <!-- navbar -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+</header>
