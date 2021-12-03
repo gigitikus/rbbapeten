@@ -1,0 +1,63 @@
+{% set tahun = filtereddocument.tahun %}
+{% set documents = filtereddocument.documents %}
+{% set categories = filtereddocument.categories %}
+
+<div class="feature-box box-style">
+    <form class="form-horizontal" method="get" action="{{ url('/filter-document') }}">
+        <div class="card-body">
+            <div class="form-group row">
+                <input type="text" name="menuid" style="visibility: hidden;" value="{{ currentPage }}">
+                <label for="ddTahun" class="col-sm-4 col-form-label">Tampilkan Data Tahun</label>
+                <div class="col-sm-10">
+                    <select name="tahun" class="form-select">
+                        <option>Pilih tahun</option>
+                        {% for th in tahun %}
+                        <option value="{{ th }}">{{ th }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success col-sm-2">Tampilkan</button>
+            </div>  
+        </div>
+    </form>
+</div>
+{% for doc in documents %}
+    <div class="feature-box box-style">
+        <div class="card">
+            <div class="card-header">
+                {% for cate in categories if cate.id == doc.category_id %}
+                <h4>{{ cate.category_title }}</h4>
+                {% endfor %}
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <thead>
+                        <th>Judul Dokumen</th>
+                        <th style="width: 150px;">Tahun</th>
+                        <th style="width: 200px;">Last Modified</th>
+                        <th style="width: 80px;">Aksi</th>
+                    </thead>
+                    {% for lamp in doc.lampiran %}
+                    <tbody>
+                        <tr>
+                            <td>{{ lamp.judul_lampiran }}
+                            </td>
+                            <td>{{ doc.year }}</td>
+                            <td>{{ doc.lastmodified }}</td>
+                            <td>
+                                <a href="http://127.0.0.1:8000/storage/app/media{{ lamp.lampiran }}" target="_blank" 
+                                class="btn btn-primary btn-sm" role="button">View</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+{% framework %}
+{% framework extras %}
+{% scripts %}

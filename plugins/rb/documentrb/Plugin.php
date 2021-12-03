@@ -7,7 +7,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'rb\documentrb\components\FilterDocument' => 'filterdocument'
+            'rb\documentrb\components\FilterDocument' => 'filterdocument',
+            'rb\documentrb\components\FilteredDocument' => 'filtereddocument'
         ];
     }
 

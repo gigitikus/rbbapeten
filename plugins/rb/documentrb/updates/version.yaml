@@ -90,3 +90,6 @@
 1.0.31:
     - 'Updated table rb_documentrb_'
     - builder_table_update_rb_documentrb__3.php
+1.0.32:
+    - 'Updated table rb_documentrb_'
+    - builder_table_update_rb_documentrb__4.php
